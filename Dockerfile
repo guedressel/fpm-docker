@@ -9,5 +9,6 @@ RUN apt-get -y update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+VOLUME /build
 WORKDIR /build
 ENTRYPOINT ["fpm"]
