@@ -15,4 +15,4 @@ else
   interact=-i
 fi
 
-exec docker run --rm $interact -g $USER:$GROUP -v $PWD:/build $IMG:$TAG "$@"
+exec docker run --rm $interact -u $USER:$GROUP -v $PWD:/build $IMG:$TAG "$@"
